@@ -1,0 +1,65 @@
+<div style="font-family: Arial, sans-serif; background-color: #ffffff; padding: 20px; border-radius: 8px; color: #333;">
+  <div style="text-align: center; padding-bottom: 10px;">
+    <img style="height: 40px;" src="https://3md.com.br/wp-content/uploads/2024/06/Ativo-11.png" alt="Logo Lunio">
+  </div>
+
+  <h2 style="color: #1d1d1d; font-size: 20px; margin-top: 0;">Novo Chamado - ##ticket.id##</h2>
+
+  <p style="margin: 10px 0;">Olá,</p>
+
+  <p style="margin: 10px 0;">
+    Informamos que foi gerado um novo chamado:<br>
+    <strong>"##ticket.title##"</strong>.
+  </p>
+
+  <!-- BLOCO DE INFORMAÇÕES GERAIS -->
+  <div style="background-color: #f9f9f9; padding: 12px; border-radius: 4px; font-size: 15px; margin: 20px 0;">
+    <p style="margin: 5px 0;"><strong>Requerente:</strong> ##ticket.authors##</p>
+    <p style="margin: 5px 0;"><strong>Data de abertura:</strong> ##ticket.date##</p>
+  </div>
+
+  <!-- BLOCO DE STATUS E DESCRIÇÃO -->
+  <div style="background-color: #f2f2f2; padding: 12px; border-radius: 4px; font-size: 15px; margin: 20px 0;">
+    <p style="margin: 5px 0;"><strong>Status:</strong>
+      ##IF##ticket.status## == "Fechado"##
+        Chamado finalizado com sucesso.
+      ##ELSEIF##ticket.status## == "Aguardando"##
+        Aguardando informações ou retorno.
+      ##ELSEIF##ticket.status## == "Planejado"##
+        Atendimento programado.
+      ##ELSEIF##ticket.status## == "Resolvido"##
+        Solução aplicada, aguardando confirmação.
+      ##ELSEIF##ticket.status## == "Atribuído"##
+        Em andamento com o técnico responsável.
+      ##ELSE##
+        ##ticket.status##
+      ##ENDIF##
+    </p>
+    <p style="margin: 10px 0 0;"><strong>Descrição:</strong><br>##ticket.description##</p>
+  </div>
+
+  <!-- BOTÃO DINÂMICO -->
+  <div style="text-align: center; margin: 20px 0;">
+    ##IF##ticket.status## == "Fechado"##
+      <a style="background-color: #4CAF50; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-size: 15px; display: inline-block;" href="https://suporte.3md.com.br/glpi/front/ticket.form.php?id=##ticket.id##" target="_blank" rel="noopener">
+        Visualize o chamado
+      </a>
+    ##ELSEIF##ticket.status## == "Aguardando"##
+      <a style="background-color: #FF9800; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-size: 15px; display: inline-block;" href="https://suporte.3md.com.br/glpi/front/ticket.form.php?id=##ticket.id##" target="_blank" rel="noopener">
+        Visualize o chamado
+      </a>
+    ##ELSE##
+      <a style="background-color: #2f3b84; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-size: 15px; display: inline-block;" href="https://suporte.3md.com.br/glpi/front/ticket.form.php?id=##ticket.id##" target="_blank" rel="noopener">
+        Visualize o chamado
+      </a>
+    ##ENDIF##
+  </div>
+
+  <p style="text-align: center; color: #666666; font-size: 14px; margin-top: 20px;">
+    Clique aqui para interagir ou buscar maiores detalhes sobre este chamado.
+  </p>
+
+  <div style="text-align: center; margin-top: 10px;">
+    <img style="height: 24px;" src="https://3md.com.br/wp-content/uploads/2024/06/Ativo-11.png" alt="Logo Lunio">
+  </div>
+</div>
