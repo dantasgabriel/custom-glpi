@@ -16,7 +16,7 @@
   <!-- BLOCO DE INFORMAÇÕES -->
   <div style="background-color: #f9f9f9; padding: 12px; border-radius: 4px; font-size: 15px; margin: 20px 0;">
     <p style="margin: 5px 0;"><strong>Requerente:</strong> ##ticket.authors##</p>
-    <p style="margin: 5px 0;"><strong>Data de abertura:</strong> ##ticket.date##</p>
+    <p style="margin: 5px 0;"><strong>Data de abertura:</strong> ##ticket.creationdate##</p>
   </div>
 
   <!-- BLOCO DE STATUS -->
