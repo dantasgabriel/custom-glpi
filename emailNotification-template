@@ -1,7 +1,7 @@
 <div style="font-family: Arial, sans-serif; background-color: #ffffff; padding: 20px; border-radius: 8px; color: #333;">
   <div style="text-align: center; padding-bottom: 10px;">
-    <img src="https://3md.com.br/wp-content/uploads/2024/06/Ativo-11.png" alt="Logo Lunio"
-         style="max-width: 180px; height: auto;" />
+    <img src="https://3md.com.br/wp-content/uploads/2024/06/Ativo-11.png"
+         width="180" style="width:180px; height:auto; display:block; margin: 0 auto;" />
   </div>
 
   <h2 style="color: #1d1d1d; font-size: 20px; margin-top: 0;">Novo Chamado - ##ticket.id##</h2>
@@ -13,13 +13,11 @@
     <strong>"##ticket.title##"</strong>.
   </p>
 
-  <!-- BLOCO DE INFORMAÇÕES -->
   <div style="background-color: #f9f9f9; padding: 12px; border-radius: 4px; font-size: 15px; margin: 20px 0;">
     <p style="margin: 5px 0;"><strong>Requerente:</strong> ##ticket.authors##</p>
     <p style="margin: 5px 0;"><strong>Data de abertura:</strong> ##ticket.creationdate##</p>
   </div>
 
-  <!-- BLOCO DE STATUS -->
   <div style="background-color: #f2f2f2; padding: 12px; border-radius: 4px; font-size: 15px; margin: 20px 0;">
     <p style="margin: 5px 0;"><strong>Status:</strong>
       ##IF##ticket.status## == "Fechado"##
@@ -39,7 +37,6 @@
     <p style="margin: 10px 0 0;"><strong>Descrição:</strong><br />##ticket.description##</p>
   </div>
 
-  <!-- BOTÃO DE ACESSO -->
   <div style="text-align: center; margin: 20px 0;">
     ##IF##ticket.status## == "Fechado"##
       <a href="https://suporte.3md.com.br/glpi/front/ticket.form.php?id=##ticket.id##" target="_blank" rel="noopener"
@@ -64,7 +61,7 @@
   </p>
 
   <div style="text-align: center; margin-top: 10px;">
-    <img src="https://3md.com.br/wp-content/uploads/2024/06/Ativo-11.png" alt="Logo Lunio rodapé"
-         style="max-width: 100px; height: auto;" />
+    <img src="https://3md.com.br/wp-content/uploads/2024/06/Ativo-11.png"
+         width="100" style="width:100px; height:auto; display:block; margin: 0 auto;" />
   </div>
 </div>
